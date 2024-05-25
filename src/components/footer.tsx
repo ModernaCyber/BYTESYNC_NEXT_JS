@@ -20,19 +20,22 @@ import {
   PHONE,
   TWITTER_LINK,
 } from "@/lib/constants";
-import { usePathname } from "next/navigation";
-import { Link } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const handleClick = (link_to: string) => {
     if (pathname === "/") {
       scrollTo(link_to);
     } else {
       // Handle navigation when not on the homepage
+      router.push(`/${link_to}`);
     }
   };
+
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -122,7 +125,7 @@ const Footer: React.FC = () => {
                 <li>
                   <button
                     className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-orange-400"
-                    onClick={() => handleClick("contact")}
+                    onClick={() => handleClick("contactus")}
                   >
                     Contact
                   </button>

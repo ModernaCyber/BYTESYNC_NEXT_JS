@@ -38,7 +38,7 @@ const CallCenterHero: React.FC = () => {
           Set Up Your Call Center in Less Than 8 Hours
         </h1>
         <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-          With AFRICALL, all you need to do is provide the number of agents, make a payment, and our system will auto-configure. Within 8 hours, you'll receive your login details via email. No more on-premise installations!
+          With AFRICALL, all you need to do is provide the number of agents, make a payment, and our system will auto-configure. Within 8 hours, you will receive your login details via email. No more on-premise installations!
         </p>
         <motion.button
           whileHover={{ scale: 1.015 }}
