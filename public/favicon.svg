@@ -1,16 +1,5 @@
-
-const Logo = () => {
-  return (
-    <div className="w-auto  md:w-full h-5/6  overflow-hidden px-1 flex items-center justify-center opacity-100 z-10 cursor-pointer ">
-      {/* <img src={logo} alt='logo'width={60} className='logo-bg-img' /> */}
-      <div className="md:w-12 flex justify-center items-center aspect-square rounded-full h-full overflow-hidden mr-2 object-cover ">
-        <svg
-          version="1.1"
-          viewBox="0.00 0.00 279.00 250.00"
-        >
-          <path
-            fill="#ffa726"
-            d="
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="279" height="250"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 279.00 250.00">
+<path fill="#ffa726" d="
   M 94.47 11.00
   C 118.01 15.98 139.74 26.78 160.41 41.08
   Q 163.91 43.50 165.97 45.77
@@ -30,13 +19,8 @@ const Logo = () => {
   Q 18.57 75.46 19.26 58.79
   C 19.67 49.10 22.19 39.45 27.44 31.33
   C 42.19 8.51 69.31 5.69 94.47 11.00
-  Z"
-          />
-          <path
-            fill="#ffa726"
-            id="settings"
-            className="settings-animation"
-            d="
+  Z"></path>
+<path fill="#ffa726" id="SvgjsPath1000" d="
   M 201.64 129.41
   Q 198.97 128.54 196.45 127.90
   C 189.89 126.23 189.08 138.01 183.36 134.70
@@ -98,11 +82,8 @@ const Logo = () => {
   A 30.00 30.00 0.0 0 0 182.40 87.38
   A 30.00 30.00 0.0 0 0 212.40 117.38
   A 30.00 30.00 0.0 0 0 242.40 87.38
-  Z"
-          />
-          <path
-            fill="#ffffff"
-            d="
+  Z"></path>
+<path fill="#ffffff" d="
   M 54.14 171.04
   C 55.11 173.81 58.07 175.53 60.86 175.53
   Q 125.54 175.53 190.22 175.65
@@ -132,11 +113,8 @@ const Logo = () => {
   C 57.04 76.99 53.44 79.25 53.45 85.91
   Q 53.48 125.97 53.42 166.52
   Q 53.42 168.99 54.14 171.04
-  Z"
-          />
-          <path
-            fill="#ffa726"
-            d="
+  Z"></path>
+<path fill="#ffa726" d="
   M 150.45 232.24
   Q 137.44 226.20 124.12 218.64
   Q 122.73 217.84 124.33 217.70
@@ -152,11 +130,8 @@ const Logo = () => {
   Q 251.81 161.55 253.90 178.91
   C 255.44 191.67 254.50 205.33 248.92 216.46
   C 230.21 253.76 181.15 246.51 150.45 232.24
-  Z"
-          />
-          <path
-            fill="#fefefe"
-            d="
+  Z"></path>
+<path fill="#ffffff" d="
   M 116.98 201.30
   C 112.51 201.48 110.21 204.22 109.48 208.33
   Q 109.37 208.96 108.74 208.96
@@ -172,15 +147,6 @@ const Logo = () => {
   A 1.28 1.27 -7.2 0 1 156.37 207.97
   C 155.41 204.49 153.94 201.65 149.77 201.46
   Q 132.14 200.68 116.98 201.30
-  Z"
-          />
-        </svg>
-      </div>
-      <span className="lg:text-lg text-sm font-extrabold logo-bg-span text-[#0FC487] hover:text-[#13ffaa] ">
-        BYTESYNC
-      </span>
-    </div>
-  );
-};
-
-export default Logo;
+  Z"></path>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+</style></svg>

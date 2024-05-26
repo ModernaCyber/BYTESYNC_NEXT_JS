@@ -1,67 +1,24 @@
+import ContactForm from "@/components/contact";
 import React from "react";
 
 const ContactUs = () => {
   return (
-    <div id="contact" className="w-full h-auto min-h-dvh md:mt-2 mb-10 p-8 text-center">
-      <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
-      <form  className="max-w-md mx-auto text-left">
-        <div className="mb-4">
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Your Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-
-            className="mt-1 p-2 w-full border rounded-md"
-            required
-          />
-        </div>
-
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Your Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="mt-1 p-2 w-full border rounded-md"
-            required
-          />
-        </div>
-
-        <div className="mb-4">
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Your Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            className="mt-1 p-2 w-full border rounded-md"
-            aria-multiline
-            rows={4}
-            required
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          className="bg-[#84a6e4] rounded-2xl px-6 py-2"
-        >
-          Submit
-        </button>
-      </form>
+    <div
+      id="contact"
+      className="w-full h-auto min-h-dvh md:mt-2 mb-10 p-8 text-center"
+    >
+      <div className="w-full text-center flex flex-col items-center justify-center h-auto min-h-[480px]">
+        <h2 className="max-w-3xl bg-gradient-to-br from-[#ffa826e2] to-[#ffa726] bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+          Get in Touch With Us
+        </h2>
+        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
+          Have questions or want to learn more about our services? We're here to
+          help! Contact us today and let's start a conversation. Whether you're
+          interested in our Enterprise Resource Planning (ERP) solutions or need
+          assistance with Web Development and Design, we're ready to assist you.
+        </p>
+      </div>
+      <ContactForm />
     </div>
   );
 };

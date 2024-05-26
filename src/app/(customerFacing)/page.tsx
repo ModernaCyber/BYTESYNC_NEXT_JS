@@ -5,7 +5,7 @@ import { cache } from "@/lib/cache";
 import About from "./about/page";
 import Services from "./services/page";
 import { OurStack } from "@/components/ourStack";
-import { Contact } from "lucide-react";
+import ContactForm from "@/components/contact";
 
 export default function HomePage() {
   return (
@@ -15,20 +15,20 @@ export default function HomePage() {
         <div className="mt-4 w-full h-auto">
           <Header />
         </div>
-        <div className="w-full h-auto container mx-auto">
+        <div className="w-full h-auto md:container mx-auto">
           <About />
         </div>
-        <div className=" w-full border-t border-gray-300 my-4 container mx-auto"></div>
-        <div className="container mx-auto ">
+        <div className=" w-full border-t border-gray-300 my-4 md:container mx-auto"></div>
+        <div className="md:container mx-auto ">
           <Services />
         </div>
-        <div className=" w-full border-t border-gray-300 my-4 container mx-auto"></div>
-        <div className="w-full hidden md:block container mx-auto ">
+        <div className=" w-full border-t border-gray-300 my-4 md:container mx-auto"></div>
+        <div className="w-full hidden md:block md:container mx-auto ">
           <OurStack />
         </div>
-        <div className=" w-full border-t border-gray-300 my-4 container mx-auto"></div>
+        <div className=" w-full border-t border-gray-300 my-4 md:container mx-auto"></div>
         <div className="mx-auto">
-          <Contact />
+          <ContactForm />
         </div>
       </div>
     </main>

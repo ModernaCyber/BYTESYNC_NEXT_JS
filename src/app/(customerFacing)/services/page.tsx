@@ -1,3 +1,4 @@
+import SystemQuestionaire from "@/components/SystemQuestionaire";
 import { OurStack } from "@/components/ourStack";
 
 const Services = () => {
@@ -97,7 +98,17 @@ const Services = () => {
 
   return (
     <div id="services" className="w-full h-auto md:mt-2 mb-10 p-8">
-      <h2 className="text-3xl font-bold mb-8">Our Services</h2>
+      <div className="w-full text-center flex flex-col items-center justify-center h-auto min-h-[480px]">
+        <h2 className="max-w-3xl bg-gradient-to-br from-[#ffa826e2] to-[#ffa726] bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+          Explore Our Services
+        </h2>
+        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
+          Welcome to ByteSync! Discover our comprehensive suite of services
+          designed to optimize your business processes and drive growth. From
+          Enterprise Resource Planning (ERP) to Web Development and Design, we
+          have the solutions to meet your unique needs.
+        </p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {servicesData.map((service, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -112,6 +123,9 @@ const Services = () => {
         ))}
       </div>
       <div className=" w-full border-t border-gray-300 my-4"></div>
+      <SystemQuestionaire />
+      <div className=" w-full border-t border-gray-300 my-4"></div>
+
       <div className="w-full hidden md:block ">
         <OurStack />
       </div>

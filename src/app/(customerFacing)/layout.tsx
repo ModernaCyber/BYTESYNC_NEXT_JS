@@ -36,7 +36,7 @@ export default function Layout({
           visible: { y: 0 },
         }}
         animate={hidden ? "hidden" : "visible"}
-        transition={{ duration: 0.035, ease: "easeInOut" }}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
         className="h-16 w-full fixed top-0 left-0 z-20 "
       >
         <CustomerNav />

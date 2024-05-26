@@ -7,8 +7,9 @@ import {
   FaLinkedin,
   FaInstagram,
   FaMailBulk,
+  FaWhatsapp,
 } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
+import { FiPhone, FiWatch } from "react-icons/fi";
 import Copyright from "./copyright";
 import Whatsapp from "./whatsapp";
 import {
@@ -63,13 +64,13 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="footer" className="w-full h-auto min-h-80 flex flex-col bg-[#020617] text-white">
-      <div className="w-full h-full flex flex-col container mx-auto">
+    <footer id="footer" className="w-full relative h-auto min-h-80 flex flex-col bg-[#020617] text-white">
+      <div className="w-full h-full flex flex-col md:container mx-auto">
         <div className="w-full h-auto py-8 px-4 flex justify-center items-center"></div>
         <div className="w-full h-auto p-8">
           <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             <div className="w-full mb-4 text-left">
-              <h2 className="text-3xl font-bold mb-2">Contact Us</h2>
+              <h2 className="text-2xl font-bold mb-2">Contact Us</h2>
               <div className="mb-4 w-auto flex flex-col items-center justify-center">
                 <div className="flex w-full items-center justify-start">
                   <FiPhone className="mr-2" />
@@ -81,16 +82,16 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <div className="flex space-x-4">
-                <a href={FB_LINK} target="_blank" className="text-2xl">
+                <a href={FB_LINK} target="_blank" className="text-xl">
                   <FaFacebook />
                 </a>
-                <a href={TWITTER_LINK} target="_blank" className="text-2xl">
+                <a href={TWITTER_LINK} target="_blank" className="text-xl">
                   <FaTwitter />
                 </a>
-                <a href={LINKEDLN_LINK} target="_blank" className="text-2xl">
+                <a href={LINKEDLN_LINK} target="_blank" className="text-xl">
                   <FaLinkedin />
                 </a>
-                <a href={IG_LINK} target="_blank" className="text-2xl">
+                <a href={IG_LINK} target="_blank" className="text-xl">
                   <FaInstagram />
                 </a>
               </div>
@@ -156,7 +157,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80 text-red-500" href="/services">
+                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80" href="/services">
                     Web Design & Development
                   </Link>
                 </li>
@@ -177,7 +178,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li className="w-auto h-8">
                   <a href={`https://wa.me/${PHONE}`} target="_blank" className="text-xs flex items-center">
-                    <Whatsapp />
+                    <FaWhatsapp />
                     <span className="ml-2">Whatsapp</span>
                   </a>
                 </li>
@@ -186,6 +187,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      <Whatsapp/>
       <div className="w-full h-auto bg-gray-200 opacity-100 py-2 text-gray-600">
         <Copyright />
       </div>

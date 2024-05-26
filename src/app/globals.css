@@ -74,6 +74,9 @@
     @apply bg-background text-foreground;
   }
 } */
+.w-nav{
+  width: calc(100% - 32px);
+}
 
 .header-height {
   height: calc(100dvh - 64px);
