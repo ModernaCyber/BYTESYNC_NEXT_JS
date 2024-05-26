@@ -12,10 +12,10 @@ const ContactUs = () => {
           Get in Touch With Us
         </h2>
         <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-          Have questions or want to learn more about our services? We're here to
-          help! Contact us today and let's start a conversation. Whether you're
+          Have questions or want to learn more about our services? We&lsquo;re here to
+          help! Contact us today and let&lsquo;s start a conversation. Whether you&lsquo;re
           interested in our Enterprise Resource Planning (ERP) solutions or need
-          assistance with Web Development and Design, we're ready to assist you.
+          assistance with Web Development and Design, we&lsquo;re ready to assist you.
         </p>
       </div>
       <ContactForm />
