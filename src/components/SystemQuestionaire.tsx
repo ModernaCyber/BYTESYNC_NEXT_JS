@@ -125,6 +125,9 @@ const SystemQuestionaire = () => {
               <option value="DMS">Document Management System (DMS)</option>
               <option value="WebDevelopment">Web Development and Design</option>
               <option value="AppDevelopment">App Development and Design</option>
+              <option value="CallCenter">Call Center Services</option>
+              <option value="Accounting">Accounting Solution</option>
+              <option value="Payroll">Payroll Management</option>
             </select>
           </div>
         </div>{" "}

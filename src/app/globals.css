@@ -74,7 +74,7 @@
     @apply bg-background text-foreground;
   }
 } */
-.w-nav{
+.w-nav {
   width: calc(100% - 32px);
 }
 
@@ -88,7 +88,36 @@
 .dot-animation {
   animation: moveUpDown 1s cubic-bezier(0.46, 0.02, 0.16, 1.21) infinite; /* 1s duration, infinite loop */
 }
-
+.call_center_headerText {
+  transition: 0.35s font-weight, 0.35s color;
+  cursor: pointer;
+}
+.call_center_headerText:hover {
+  font-weight: 900;
+  color: #0FC487;
+}
+/*right*/
+.call_center_headerText:hover + .call_center_headerText {
+  font-weight: 500;
+  color: #0fc4888b;
+}
+.call_center_headerText:hover
+  + .call_center_headerText
+  + .call_center_headerText {
+  font-weight: 300;
+  color: #75bea62a;
+}
+/*left*/
+.call_center_headerText:has(+ .call_center_headerText:hover) {
+  font-weight: 500;
+   color: #0fc4888b;
+}
+.call_center_headerText:has(
+    + .call_center_headerText + .call_center_headerText:hover
+  ) {
+  font-weight: 300;
+  color: #be75772a;
+}
 @keyframes rotateSettings {
   0% {
     transform: rotate(0deg);

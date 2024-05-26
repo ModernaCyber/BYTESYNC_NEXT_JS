@@ -18,20 +18,20 @@ const TechnologyCard = ({ imageName, technologyName }:{imageName:string,technolo
     );
   };
   const technologyStack = [
-    { imageName: "assets/java.png", technologyName: "Java" },
-    { imageName: "assets/python.png", technologyName: "Python" },
-    { imageName: "assets/javascript.png", technologyName: "JavaScript" },
-    { imageName: "assets/php.png", technologyName: "PHP" },
-    { imageName: "assets/react.png", technologyName: "React" },
-    { imageName: "assets/reactNative.png", technologyName: "React Native" },
-    { imageName: "assets/node.png", technologyName: "Node.js" },
-    { imageName: "assets/springboot.png", technologyName: "Spring Boot" },
-    { imageName: "assets/postgres.png", technologyName: "PostgreSQL" },
-    { imageName: "assets/sql.png", technologyName: "SQL" },
-    { imageName: "assets/mssql.png", technologyName: "MS SQL" },
-    { imageName: "assets/mongodb.png", technologyName: "MongoDB" },
-    { imageName: "assets/laravel.png", technologyName: "Laravel" },
-    { imageName: "assets/tailwind-css.png", technologyName: "Tailwind CSS" },
+    { imageName: "/assets/java.png", technologyName: "Java" },
+    { imageName: "/assets/python.png", technologyName: "Python" },
+    { imageName: "/assets/javascript.png", technologyName: "JavaScript" },
+    { imageName: "/assets/php.png", technologyName: "PHP" },
+    { imageName: "/assets/react.png", technologyName: "React" },
+    { imageName: "/assets/reactNative.png", technologyName: "React Native" },
+    { imageName: "/assets/node.png", technologyName: "Node.js" },
+    { imageName: "/assets/springboot.png", technologyName: "Spring Boot" },
+    { imageName: "/assets/postgres.png", technologyName: "PostgreSQL" },
+    { imageName: "/assets/sql.png", technologyName: "SQL" },
+    { imageName: "/assets/mssql.png", technologyName: "MS SQL" },
+    { imageName: "/assets/mongodb.png", technologyName: "MongoDB" },
+    { imageName: "/assets/laravel.png", technologyName: "Laravel" },
+    { imageName: "/assets/tailwind-css.png", technologyName: "Tailwind CSS" },
   ];
   export const OurStack = () => {
     return (

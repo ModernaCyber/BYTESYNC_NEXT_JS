@@ -124,10 +124,7 @@ const Services = () => {
       </div>
       <div className=" w-full border-t border-gray-300 my-4"></div>
       <SystemQuestionaire />
-      <div className=" w-full border-t border-gray-300 my-4"></div>
-      <div className="w-full hidden md:block ">
-        <OurStack />
-      </div>
+
     </div>
   );
 };

@@ -58,7 +58,7 @@ const CallCenterPlans = () => {
             key={index}
           >
             <motion.h2
-              style={{ backgroundImage }}
+              style={{ color }}
               className="text-left md:text-center bg-clip-text text-xl font-medium leading-tight text-transparent 
           sm:text-3xl sm:leading-tight md:text-5xl md:leading-tight pt-4 mb-2 "
             >

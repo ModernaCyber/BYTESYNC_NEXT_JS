@@ -5,7 +5,7 @@ import { cache } from "@/lib/cache";
 import About from "./about/page";
 import Services from "./services/page";
 import { OurStack } from "@/components/ourStack";
-import ContactForm from "@/components/contact";
+import Partners from "@/components/Partners";
 
 export default function HomePage() {
   return (
@@ -21,6 +21,14 @@ export default function HomePage() {
         <div className=" w-full border-t border-gray-300 my-4 md:container mx-auto"></div>
         <div className="md:container mx-auto ">
           <Services />
+        </div>
+        <div className=" w-full border-t border-gray-300 my-4"></div>
+        <div className="w-full hidden md:block ">
+          <OurStack />
+        </div>
+        <div className=" w-full border-t border-gray-300 my-4"></div>
+        <div className="w-full h-auto">
+          <Partners />
         </div>
       </div>
     </main>

@@ -20,7 +20,7 @@ interface FormData {
   };
   goals: {
     [key: string]: boolean;
-  };    
+  };
   otherGoals: string;
 
   importantFeatures: {
@@ -69,9 +69,8 @@ const CallCenterForm = () => {
       advancedFeatures: false,
       betterCustomerService: false,
       mobilitySupport: false,
-    },      
+    },
     otherGoals: "",
-
     importantFeatures: {
       callQuality: 1,
       scalability: 1,
@@ -119,17 +118,55 @@ const CallCenterForm = () => {
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >
   ) => {
-    const { name, value, type } = e.target;
-
+    const { name, value, type, id } = e.target;
     if (type === "checkbox") {
       const checkbox = e.target as HTMLInputElement; // Type assertion
-      setFormData((prevData) => ({
-        ...prevData,
-        contactMethods: {
-          ...prevData.contactMethods,
-          [name]: checkbox.checked,
-        },
-      }));
+      switch (id) {
+        case "contactMethods":
+          console.log("contactMethods----", name, value, type, id);
+
+          setFormData((prevData) => ({
+            ...prevData,
+            contactMethods: {
+              ...prevData.contactMethods,
+              [name.split(".")[1]]: checkbox.checked,
+            },
+          }));
+          break;
+        case "primaryTools":
+          console.log("primaryTools----", name, value, type, id);
+
+          setFormData((prevData) => ({
+            ...prevData,
+            primaryTools: {
+              ...prevData.primaryTools,
+              [name.split(".")[1]]: checkbox.checked,
+            },
+          }));
+          break;
+
+        case "remoteSupport":
+          console.log("remoteSupport----", name, value, type, id);
+
+          setFormData((prevData) => ({
+            ...prevData,
+            remoteSupport: checkbox.checked,
+          }));
+          break;
+        case "goals":
+          console.log("goals----", name, value, type, id);
+
+          setFormData((prevData) => ({
+            ...prevData,
+            goals: {
+              ...prevData.goals,
+              [name.split(".")[1]]: checkbox.checked,
+            },
+          }));
+          break;
+        default:
+          break;
+      }
     } else if (type === "radio") {
       // Radio handling logic
     } else if (name.startsWith("importantFeatures.")) {
@@ -266,33 +303,7 @@ const CallCenterForm = () => {
               required
             />
           </div>
-          <div className="mb-4 w-full flex flex-col items-start">
-            <label className="block text-sm font-medium text-gray-600">
-              Contact Methods
-            </label>
-            {[
-              "phone",
-              "email",
-              "socialMedia",
-              "twitter",
-              "facebook",
-              "instagram",
-              "linkedin",
-              "whatsapp",
-              "tiktok",
-            ].map((method) => (
-              <label key={method} className="flex items-center">
-                <input
-                  type="checkbox"
-                  name={method}
-                  checked={formData.contactMethods[method]}
-                  onChange={handleChange}
-                  className="mr-2"
-                />
-                {method.charAt(0).toUpperCase() + method.slice(1)}
-              </label>
-            ))}
-          </div>
+
           <div className="mb-4 w-full flex flex-col items-start">
             <label
               htmlFor="currentSystem"
@@ -327,6 +338,34 @@ const CallCenterForm = () => {
           </div>
           <div className="mb-4 w-full flex flex-col items-start">
             <label className="block text-sm font-medium text-gray-600">
+              Contact Methods
+            </label>
+            {[
+              "phone",
+              "email",
+              "socialMedia",
+              "twitter",
+              "facebook",
+              "instagram",
+              "linkedin",
+              "whatsapp",
+              "tiktok",
+            ].map((method) => (
+              <label key={method} className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="contactMethods"
+                  name={`contactMethods.${method}`}
+                  checked={formData.contactMethods[method]}
+                  onChange={handleChange}
+                  className="mr-2"
+                />
+                {method.charAt(0).toUpperCase() + method.slice(1)}
+              </label>
+            ))}
+          </div>
+          <div className="mb-4 w-full flex flex-col items-start">
+            <label className="block text-sm font-medium text-gray-600">
               Primary Communication Tools
             </label>
             {[
@@ -339,6 +378,7 @@ const CallCenterForm = () => {
               <label key={tool} className="flex items-center">
                 <input
                   type="checkbox"
+                  id="primaryTools"
                   name={`primaryTools.${tool}`}
                   checked={formData.primaryTools[tool]}
                   onChange={handleChange}
@@ -364,6 +404,7 @@ const CallCenterForm = () => {
                 <input
                   type="checkbox"
                   name={`goals.${goal}`}
+                  id="goals"
                   checked={formData.goals[goal]}
                   onChange={handleChange}
                   className="mr-2"
@@ -490,21 +531,31 @@ const CallCenterForm = () => {
               className="mt-1 p-2 w-full border rounded-md"
             />
           </div>
+
           <div className="mb-4 w-full flex flex-col items-start">
             <label
               htmlFor="implementationTimeline"
               className="block text-sm font-medium text-gray-600"
             >
-              Implementation Timeline
+              Select Implementation Timeline
             </label>
-            <input
-              type="text"
+            <select
               id="implementationTimeline"
               name="implementationTimeline"
               value={formData.implementationTimeline}
               onChange={handleChange}
               className="mt-1 p-2 w-full border rounded-md"
-            />
+              required
+            >
+              <option value="">Select ...</option>
+              {["Immediately", "In 3 months", "In 6 months", "In 1 year"].map(
+                (timeline) => (
+                  <option key={timeline} value={timeline}>
+                    {timeline}
+                  </option>
+                )
+              )}
+            </select>
           </div>
         </div>
         <div className="w-full">
