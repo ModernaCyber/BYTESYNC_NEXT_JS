@@ -22,14 +22,6 @@ export default function HomePage() {
         <div className="md:container mx-auto ">
           <Services />
         </div>
-        <div className=" w-full border-t border-gray-300 my-4 md:container mx-auto"></div>
-        <div className="w-full hidden md:block md:container mx-auto ">
-          <OurStack />
-        </div>
-        <div className=" w-full border-t border-gray-300 my-4 md:container mx-auto"></div>
-        <div className="mx-auto">
-          <ContactForm />
-        </div>
       </div>
     </main>
   );
