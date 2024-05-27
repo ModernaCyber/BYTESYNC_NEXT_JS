@@ -94,7 +94,7 @@
 }
 .call_center_headerText:hover {
   font-weight: 900;
-  color: #0FC487;
+  color: #0fc487;
 }
 /*right*/
 .call_center_headerText:hover + .call_center_headerText {
@@ -110,7 +110,7 @@
 /*left*/
 .call_center_headerText:has(+ .call_center_headerText:hover) {
   font-weight: 500;
-   color: #0fc4888b;
+  color: #0fc4888b;
 }
 .call_center_headerText:has(
     + .call_center_headerText + .call_center_headerText:hover

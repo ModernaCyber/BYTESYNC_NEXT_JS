@@ -37,7 +37,6 @@ const Footer: React.FC = () => {
     }
   };
 
-
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -64,7 +63,10 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="footer" className="w-full relative h-auto min-h-80 flex flex-col bg-[#020617] text-white">
+    <footer
+      id="footer"
+      className="w-full relative h-auto min-h-80 flex flex-col bg-[#020617] text-white"
+    >
       <div className="w-full h-full flex flex-col md:container mx-auto">
         <div className="w-full h-auto py-8 px-4 flex justify-center items-center"></div>
         <div className="w-full h-auto p-8">
@@ -101,23 +103,23 @@ const Footer: React.FC = () => {
               <ul className="list-none">
                 <li>
                   <button
-                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-orange-400"
-                    onClick={() => handleClick("home")}
+                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-[#0FC487]"
+                    onClick={() => handleClick("/")}
                   >
                     Home
                   </button>
                 </li>
                 <li>
                   <button
-                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-orange-400"
-                    onClick={() => handleClick("about-us")}
+                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-[#0FC487]"
+                    onClick={() => handleClick("about")}
                   >
                     About Us
                   </button>
                 </li>
                 <li>
                   <button
-                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-orange-400"
+                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-[#0FC487]"
                     onClick={() => handleClick("services")}
                   >
                     Services
@@ -125,7 +127,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-orange-400"
+                    className="text-xs hover:translate-x-2 transition-all hover:opacity-80 opacity-100 hover:text-[#0FC487]"
                     onClick={() => handleClick("contactus")}
                   >
                     Contact
@@ -137,27 +139,42 @@ const Footer: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Our Services</h3>
               <ul className="list-none">
                 <li>
-                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80" href="/services">
+                  <Link
+                    className="text-xs hover:translate-x-2 transition-all hover:text-[#0FC487]"
+                    href="/services"
+                  >
                     Enterprise Resource Planning
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80" href="/services">
+                  <Link
+                    className="text-xs hover:translate-x-2 transition-all hover:text-[#0FC487]"
+                    href="/services"
+                  >
                     Customer Relationship Management
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80" href="/services">
+                  <Link
+                    className="text-xs hover:translate-x-2 transition-all hover:text-[#0FC487]"
+                    href="/services"
+                  >
                     Enterprise Content Management
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80" href="/services">
+                  <Link
+                    className="text-xs hover:translate-x-2 transition-all hover:text-[#0FC487]"
+                    href="/services"
+                  >
                     Document Management Solution
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xs hover:translate-x-2 transition-all hover:opacity-80" href="/services">
+                  <Link
+                    className="text-xs hover:translate-x-2 transition-all hover:text-[#0FC487]"
+                    href="/services"
+                  >
                     Web Design & Development
                   </Link>
                 </li>
@@ -167,18 +184,30 @@ const Footer: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Connect With Us</h3>
               <ul className="list-none">
                 <li>
-                  <a href={`mailto:${EMAIL}`} target="_blank" className="text-xs">
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    target="_blank"
+                    className="text-xs hover:animate-pulse hover:text-[#0FC487]"
+                  >
                     Email Us: {EMAIL}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${PHONE}`} target="_blank" className="text-xs">
+                  <a
+                    href={`tel:${PHONE}`}
+                    target="_blank"
+                    className="text-xs hover:animate-pulse hover:text-[#0FC487]"
+                  >
                     Phone: {PHONE}
                   </a>
                 </li>
                 <li className="w-auto h-8">
-                  <a href={`https://wa.me/${PHONE}`} target="_blank" className="text-xs flex items-center">
-                    <FaWhatsapp />
+                  <a
+                    href={`https://wa.me/${PHONE}`}
+                    target="_blank"
+                    className="text-xs hover:animate-pulse hover:text-[#0FC487] flex items-center"
+                  >
+                    <FaWhatsapp className="text-lg" />
                     <span className="ml-2">Whatsapp</span>
                   </a>
                 </li>
@@ -187,7 +216,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <Whatsapp/>
+      <Whatsapp />
       <div className="w-full h-auto bg-gray-200 opacity-100 py-2 text-gray-600">
         <Copyright />
       </div>

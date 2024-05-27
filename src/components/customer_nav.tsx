@@ -8,7 +8,8 @@ const CustomerNav = () => {
     <NavLink href="/services">Services</NavLink>
     <NavLink href="/callcenter">CallCenter</NavLink>
     <NavLink href="/portfolio">Portfolio</NavLink>
-    <NavLink href="/admin">Portal</NavLink>
+    <NavLink href="/portal">Portal</NavLink>
+    <NavLink href="/refer">Refer</NavLink>
     <NavLink href="/contactus">ContactUs</NavLink>
   </Nav>
   )

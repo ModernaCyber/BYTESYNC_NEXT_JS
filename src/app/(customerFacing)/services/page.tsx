@@ -97,7 +97,7 @@ const Services = () => {
   ];
 
   return (
-    <div id="services" className="w-full h-auto md:mt-2 mb-10 p-8">
+    <div id="services" className="w-full h-auto md:mt-2 mb-10 p-2 md:p-8">
       <div className="w-full text-center flex flex-col items-center justify-center h-auto min-h-[480px]">
         <h2 className="max-w-3xl bg-gradient-to-br from-[#ffa826e2] to-[#ffa726] bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
           Explore Our Services
@@ -124,7 +124,6 @@ const Services = () => {
       </div>
       <div className=" w-full border-t border-gray-300 my-4"></div>
       <SystemQuestionaire />
-
     </div>
   );
 };

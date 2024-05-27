@@ -11,7 +11,7 @@ const Copyright = () => {
     >
       <p>
         &copy; {currentYear}{" "}
-        <span className="text-orange-400 text-sm font-mono ">
+        <span className="text-[#0FC487] animate-pulse text-sm font-mono ">
           {companyName}
         </span>{" "}
         . All rights reserved.

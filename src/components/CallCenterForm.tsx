@@ -9,7 +9,7 @@ interface FormData {
   phone: string;
   company: string;
   selectedPlan: string;
-  agents: string;
+  agents: number;
   contactMethods: {
     [key: string]: boolean;
   };
@@ -41,7 +41,7 @@ const CallCenterForm = () => {
     phone: "",
     company: "",
     selectedPlan: "",
-    agents: "",
+    agents: 1,
     contactMethods: {
       phone: false,
       email: false,
@@ -123,7 +123,7 @@ const CallCenterForm = () => {
       const checkbox = e.target as HTMLInputElement; // Type assertion
       switch (id) {
         case "contactMethods":
-          console.log("contactMethods----", name, value, type, id);
+          // console.log("contactMethods----", name, value, type, id);
 
           setFormData((prevData) => ({
             ...prevData,
@@ -134,7 +134,7 @@ const CallCenterForm = () => {
           }));
           break;
         case "primaryTools":
-          console.log("primaryTools----", name, value, type, id);
+          // console.log("primaryTools----", name, value, type, id);
 
           setFormData((prevData) => ({
             ...prevData,
@@ -146,7 +146,7 @@ const CallCenterForm = () => {
           break;
 
         case "remoteSupport":
-          console.log("remoteSupport----", name, value, type, id);
+          // console.log("remoteSupport----", name, value, type, id);
 
           setFormData((prevData) => ({
             ...prevData,
@@ -154,7 +154,7 @@ const CallCenterForm = () => {
           }));
           break;
         case "goals":
-          console.log("goals----", name, value, type, id);
+          // console.log("goals----", name, value, type, id);
 
           setFormData((prevData) => ({
             ...prevData,
@@ -169,8 +169,16 @@ const CallCenterForm = () => {
       }
     } else if (type === "radio") {
       // Radio handling logic
-    } else if (name.startsWith("importantFeatures.")) {
+    } else if (name.startsWith("importantFeatures.") || type === "range") {
       // Important features handling logic
+      // console.log(name, value);
+      setFormData((formData) => ({
+        ...formData,
+        importantFeatures: {
+          ...formData.importantFeatures,
+          [name.split(".")[1]]: Number(value),
+        },
+      }));
     } else {
       setFormData({
         ...formData,
@@ -297,6 +305,7 @@ const CallCenterForm = () => {
               type="number"
               id="agents"
               name="agents"
+              min={1}
               value={formData.agents}
               onChange={handleChange}
               className="mt-1 p-2 w-full border rounded-md"
