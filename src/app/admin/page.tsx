@@ -1,12 +1,12 @@
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 // import db from "@/db/db"
-// import { formatCurrency, formatNumber } from "@/lib/formatters"
+import { formatCurrency, formatNumber } from "@/lib/formatters"
 
 // async function getSalesData() {
 //   const data = await db.order.aggregate({
@@ -54,44 +54,44 @@ export default async function AdminDashboard() {
   // ])
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {/* <DashboardCard
+    <div className="grid grid-cols-1 md:container md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <DashboardCard
         title="Sales"
-        subtitle={`${formatNumber(salesData.numberOfSales)} Orders`}
-        body={formatCurrency(salesData.amount)}
+        subtitle={`${formatNumber(20)} Orders`}
+        body={formatCurrency(44)}
       />
       <DashboardCard
         title="Customers"
         subtitle={`${formatCurrency(
-          userData.averageValuePerUser
+          345
         )} Average Value`}
-        body={formatNumber(userData.userCount)}
+        body={formatNumber(545)}
       />
       <DashboardCard
         title="Active Products"
-        subtitle={`${formatNumber(productData.inactiveCount)} Inactive`}
-        body={formatNumber(productData.activeCount)}
-      /> */}
+        subtitle={`${formatNumber(454)} Inactive`}
+        body={formatNumber(4)}
+      />
     </div>
   )
 }
 
-// type DashboardCardProps = {
-//   title: string
-//   subtitle: string
-//   body: string
-// }
+type DashboardCardProps = {
+  title: string
+  subtitle: string
+  body: string
+}
 
-// function DashboardCard({ title, subtitle, body }: DashboardCardProps) {
-//   return (
-//     <Card>
-//       <CardHeader>
-//         <CardTitle>{title}</CardTitle>
-//         <CardDescription>{subtitle}</CardDescription>
-//       </CardHeader>
-//       <CardContent>
-//         <p>{body}</p>
-//       </CardContent>
-//     </Card>
-//   )
-// }
+function DashboardCard({ title, subtitle, body }: DashboardCardProps) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{subtitle}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>{body}</p>
+      </CardContent>
+    </Card>
+  )
+}

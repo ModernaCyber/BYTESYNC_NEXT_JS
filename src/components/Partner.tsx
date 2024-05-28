@@ -18,16 +18,22 @@ const Partner = ({ partner }: { partner: PartnerType }) => {
     initial: { y: 100, opacity: 0 },
     animate: { y: 0, opacity: 1 },
   };
+  const borderVariants = {
+    initial: { y: 100, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
   return (
     <a
       target="_blank"
       href={href}
       className="w-full h-[400px] flex justify-center items-center relative overflow-hidden shadow-xl rounded-md "
     >
-      <img
+      <Image
         src={img}
         alt={name}
-        className="w-full max-w-[200px] h-[200px] absolute inset-0 object-cover mx-auto z-20"
+        width={200}
+        height={200}
+        className="w-auto max-w-[200px] absolute inset-0 object-contain mx-auto z-20"
       />
       <div className="absolute bg-[#272243]/25 bottom-0 h-[250px] p-2 z-10 flex flex-col cursor-pointer ">
         <motion.h4
@@ -43,6 +49,17 @@ const Partner = ({ partner }: { partner: PartnerType }) => {
         >
           {name}
         </motion.h4>
+        <motion.div
+          variants={borderVariants}
+          initial="initial"
+          // animate="animate"
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 1.0,
+            delay: 0.1,
+          }}
+          className="w-4/5 mr-auto h-[1px] bg-gray-400"
+        />
         <motion.p
           variants={MessageVariants}
           initial="initial"
@@ -52,7 +69,6 @@ const Partner = ({ partner }: { partner: PartnerType }) => {
             duration: 1.0,
             delay: 0.3,
           }}
-          
           className="text-gray-700 sm:text-xs md:text-sm"
         >
           {message}
