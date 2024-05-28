@@ -25,6 +25,8 @@ const EXIT_KEYFRAMES = {
   top: [NO_CLIP, TOP_RIGHT_CLIP],
   right: [NO_CLIP, BOTTOM_LEFT_CLIP],
 };
+type Side = 'left' | 'bottom' | 'top' | 'right';
+
 const Service = ({ service }: { service: ServiceType }) => {
   const { icon, title, description } = service;
   const [scope, animate] = useAnimate();
@@ -41,32 +43,15 @@ const Service = ({ service }: { service: ServiceType }) => {
       clipPath: EXIT_KEYFRAMES[side],
     });
   };
-  const getNearestSide = (e: any) => {
-    const box = e.target.getBoundingClientRect();
-    e.clientX;
-    e.clientY;
-    const proximityToLeft = {
-      proximity: Math.abs(box.left - e.clientX),
-      side: "left",
-    };
-    const proximityToRight = {
-      proximity: Math.abs(box.right - e.clientX),
-      side: "right",
-    };
-    const proximityToTop = {
-      proximity: Math.abs(box.top - e.clientY),
-      side: "top",
-    };
-    const proximityToBottom = {
-      proximity: Math.abs(box.bottom - e.clientY),
-      side: "bottom",
-    };
-    const sortedProximity = [
-      proximityToLeft,
-      proximityToRight,
-      proximityToTop,
-      proximityToBottom,
-    ].sort((a, b) => a.proximity - b.proximity);
+  const getNearestSide = (e: React.MouseEvent<HTMLDivElement>): Side => {
+    const box = e.currentTarget.getBoundingClientRect();
+    const proximityToLeft = { proximity: Math.abs(box.left - e.clientX), side: 'left' as Side };
+    const proximityToRight = { proximity: Math.abs(box.right - e.clientX), side: 'right' as Side };
+    const proximityToTop = { proximity: Math.abs(box.top - e.clientY), side: 'top' as Side };
+    const proximityToBottom = { proximity: Math.abs(box.bottom - e.clientY), side: 'bottom' as Side };
+
+    const sortedProximity = [proximityToLeft, proximityToRight, proximityToTop, proximityToBottom]
+      .sort((a, b) => a.proximity - b.proximity);
 
     return sortedProximity[0].side;
   };

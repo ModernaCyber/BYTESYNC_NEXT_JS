@@ -1,6 +1,5 @@
 import Service from "@/components/Service";
 import SystemQuestionaire from "@/components/SystemQuestionaire";
-import { OurStack } from "@/components/ourStack";
 
 const Services = () => {
   const servicesData = [
